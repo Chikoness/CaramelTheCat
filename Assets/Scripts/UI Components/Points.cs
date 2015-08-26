@@ -29,5 +29,10 @@ public class Points : MonoBehaviour
         {
             pointer.text = GameManager.points.ToString();
         }
+
+        if (GameManager.GameState == State.GameOver)
+        {
+            
+        }
 	}
 }

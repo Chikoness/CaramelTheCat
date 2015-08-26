@@ -32,7 +32,14 @@ public class InputManager : MonoBehaviour
         get
         {
             attack = Input.GetAxisRaw("Jump");
+
+            if (GameManager.life == -1)
+            {
+                attack = 0;
+            }
+
             return attack;
+            
         }
     }
 

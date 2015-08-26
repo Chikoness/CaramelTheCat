@@ -23,7 +23,7 @@ public class UI_Manager : MonoBehaviour
     {
         if (GameManager.hasGameStarted && GameManager.GameState == State.Pause && GameManager.GameState != State.Menu)
         {
-            GameManager.GameState = State.Pause;
+            GameManager.GameState = State.Menu;
             menuScreen.enabled = true;
         }
         else if (GameManager.GameState == State.Menu)

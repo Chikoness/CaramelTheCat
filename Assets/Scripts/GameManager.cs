@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case State.Menu:
+                if (!hasGameStarted)
+                {
+                    points = 0;
+                }
                 Time.timeScale = 0;                
                 break;
 
@@ -61,7 +65,7 @@ public class GameManager : MonoBehaviour
 
             case State.GameOver:
                 Time.timeScale = 0;
-                if (Input.anyKey)
+                if (Input.anyKey && !Input.GetKey(KeyCode.Space))
                 {
                     Application.LoadLevel(Application.loadedLevel);
                 }
